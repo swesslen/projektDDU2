@@ -2,6 +2,8 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
+const main = document.querySelector("main");
+
 const controlsDiv = document.querySelector("#controls");
 controlsDiv.style.display = "flex";
 controlsDiv.style.gap = "5px";
@@ -30,20 +32,15 @@ createButton.addEventListener("click", function() {
     createGridNumbers(createInput.value)
 })
 
+let numbers = []
+
 function createGridNumbers(max) {
     for (let i = 0; i < max; i++) {
-        const gridNumberDiv = document.createElement("div");
-        numbersDiv.appendChild(gridNumberDiv)
-        
-        gridNumberDiv.style.width = "50px";
-        gridNumberDiv.style.height = "50px";
-        gridNumberDiv.style.backgroundColor = "lightgray";
-        gridNumberDiv.style.color = "black";
-        gridNumberDiv.style.borderRadius = "10px";
+        let gridNumberDiv = document.createElement("div");
+        numbersDiv.appendChild(gridNumberDiv);
+        gridNumberDiv.classList.add("gridNumberDiv")
         gridNumberDiv.innerHTML = getRandomInt(99);
-        gridNumberDiv.style.display = "flex";
-        gridNumberDiv.style.justifyContent = "center";
-        gridNumberDiv.style.alignItems = "center";
-        gridNumberDiv.style.fontSize = "20px";
     }
 }
+
+createGridNumbers(createInput.value);

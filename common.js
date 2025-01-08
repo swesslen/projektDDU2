@@ -32,7 +32,7 @@ createButton.addEventListener("click", function() {
     createGridNumbers(createInput.value)
 })
 
-let numbers = []
+let numbers = [];
 
 function createGridNumbers(max) {
     for (let i = 0; i < max; i++) {
@@ -40,6 +40,7 @@ function createGridNumbers(max) {
         numbersDiv.appendChild(gridNumberDiv);
         gridNumberDiv.classList.add("gridNumberDiv")
         gridNumberDiv.innerHTML = getRandomInt(99);
+        numbers.push(gridNumberDiv);
     }
 }
 

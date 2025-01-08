@@ -44,10 +44,12 @@ removeButton.addEventListener("click", function() {
             number.style.backgroundColor = "red";
             number.innerHTML = `X`;
             number.id = "removedGridDiv"
+            
 
             numbersRemoved.innerHTML = `${randomNumber.innerHTML} removed ${amountSelected} times`;
         } if (amountSelected == 0) {
             numbersRemoved.innerHTML = `Nothing to remove`;
         }
     }
+    amountSelected = 0;
 })

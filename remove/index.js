@@ -46,7 +46,7 @@ removeButton.addEventListener("click", function() {
             number.id = "removedGridDiv"
 
             numbersRemoved.innerHTML = `${randomNumber.innerHTML} removed ${amountSelected} times`;
-        } else if (amountSelected == 0) {
+        } if (amountSelected == 0) {
             numbersRemoved.innerHTML = `Nothing to remove`;
         }
     }

@@ -35,6 +35,7 @@ createButton.addEventListener("click", function() {
 let numbers = [];
 
 function createGridNumbers(max) {
+    numbers = [];
     for (let i = 0; i < max; i++) {
         let gridNumberDiv = document.createElement("div");
         numbersDiv.appendChild(gridNumberDiv);

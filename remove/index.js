@@ -31,25 +31,28 @@ newRandomNumberButton.addEventListener("click", function() {
         if (number.id != "removedGridDiv") {
             number.style.backgroundColor = "lightgray";
         }
-        if (randomNumber.innerHTML == number.innerHTML) {
+        if (randomNumber.innerHTML === number.innerHTML) {
             number.style.backgroundColor = "orange";
+            number.id = "selectedBox"
             amountSelected++;
         }
     }
+    
+    
+    
 })
 
 removeButton.addEventListener("click", function() {
     for (let number of numbers) {
-        if (number.style.backgroundColor == "orange") {
+        if (amountSelected == 0) {
+            numbersRemoved.innerHTML = `Nothing to remove`;
+        } else if (number.id == "selectedBox") {
             number.style.backgroundColor = "red";
             number.innerHTML = `X`;
             number.id = "removedGridDiv"
             
-
             numbersRemoved.innerHTML = `${randomNumber.innerHTML} removed ${amountSelected} times`;
-        } if (amountSelected == 0) {
-            numbersRemoved.innerHTML = `Nothing to remove`;
         }
     }
-    amountSelected = 0;
+    
 })

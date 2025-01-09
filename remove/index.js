@@ -30,6 +30,7 @@ newRandomNumberButton.addEventListener("click", function() {
     for (let number of numbers) {
         if (number.id != "removedGridDiv") {
             number.style.backgroundColor = "lightgray";
+            number.id = "";
         }
         if (randomNumber.innerHTML === number.innerHTML) {
             number.style.backgroundColor = "orange";

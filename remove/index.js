@@ -1,5 +1,5 @@
 const controls2 = document.createElement("div");
-controls2.id = "controls2";
+controls2.classList.add("controls");
 main.appendChild(controls2)
 
 const newRandomNumberButton = document.createElement("button");
@@ -38,9 +38,6 @@ newRandomNumberButton.addEventListener("click", function() {
             amountSelected++;
         }
     }
-    
-    
-    
 })
 
 removeButton.addEventListener("click", function() {
@@ -55,5 +52,4 @@ removeButton.addEventListener("click", function() {
             numbersRemoved.innerHTML = `${randomNumber.innerHTML} removed ${amountSelected} times`;
         }
     }
-    
 })

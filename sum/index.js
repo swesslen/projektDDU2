@@ -37,6 +37,7 @@ createButton.addEventListener("click", function() {
     createGridNumbers(createInput.value)
     createSumControls();
     sumOfMarkedDiv.innerHTML = `-`;
+    sumOfMarked = 0;
     for (let number of numbers) {
         number.addEventListener("click", function() {
             number.style.backgroundColor = "rgb(87, 187, 87)";

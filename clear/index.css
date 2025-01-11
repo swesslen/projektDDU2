@@ -1,11 +1,14 @@
 #numbers div:hover {
     background-color: lightblue;
+    color: black;
 }
 
 #numbers .marked {
     background-color: red;
+    color: rgba(254, 254, 254, 0);
 }
 
 #numbers .marked:hover {
     background-color: orange;
+    color: rgba(254, 254, 254, 0);
 }

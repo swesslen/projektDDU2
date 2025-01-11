@@ -18,23 +18,31 @@ function createGridNumbers(max) {
         numbersNumbers.push(Number(gridNumberDiv.innerHTML));
 
         gridNumberDiv.addEventListener("click", function() {
-            gridNumberDiv.classList.add("marked");
-            gridNumberDiv.innerHTML = "";
-            gridNumberDiv.classList.remove("gridNumberDiv");
+            if (gridNumberDiv.classList.contains("marked")) {
+                gridNumberDiv.setAttribute("class", "gridNumberDiv");
+            } else if (gridNumberDiv.classList.contains("gridNumberDiv")) {
+                gridNumberDiv.setAttribute("class", "marked");
+            }
         })
     }
 }
 
-for (let number of numbers) {
-    number.addEventListener("click", function() {
-        number.classList.add("marked");
-        number.innerHTML = "";
-        number.classList.remove("gridNumberDiv");
-    })
+function updateBox() {
+    for (let number of numbers) {
+        number.addEventListener("click", function() {
+            if (number.classList.contains("marked")) {
+                number.setAttribute("class", "gridNumberDiv");
+            } else if (number.classList.contains("gridNumberDiv")) {
+                number.setAttribute("class", "marked");
+            }
+            
+        })
+    }    
 }
+updateBox()
 
 fillClearedButton.addEventListener("click", function() {
     for (let number of numbers) {
-        
+        number.setAttribute("class", "gridNumberDiv")
     }
 })

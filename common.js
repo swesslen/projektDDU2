@@ -33,15 +33,18 @@ createButton.addEventListener("click", function() {
 })
 
 let numbers = [];
+let numbersNumbers = [];
 
 function createGridNumbers(max) {
     numbers = [];
+    numbersNumbers = [];
     for (let i = 0; i < max; i++) {
         let gridNumberDiv = document.createElement("div");
         numbersDiv.appendChild(gridNumberDiv);
         gridNumberDiv.classList.add("gridNumberDiv")
         gridNumberDiv.innerHTML = getRandomInt(99);
         numbers.push(gridNumberDiv);
+        numbersNumbers.push(Number(gridNumberDiv.innerHTML));
     }
 }
 

@@ -1,0 +1,11 @@
+#numbers div:hover {
+    background-color: lightblue;
+}
+
+#numbers .marked {
+    background-color: red;
+}
+
+#numbers .marked:hover {
+    background-color: orange;
+}

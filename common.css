@@ -1,3 +1,17 @@
+@font-face {
+    font-family: "BC-Bold";
+    src: url(fonts/BarlowCondensed-Bold.ttf);
+}
+
+@font-face {
+    font-family: "BC-Light";
+    src: url(fonts/BarlowCondensed-Light.ttf);
+}
+
+* {
+    font-family: BC-Light;
+}
+
 body {
     height: 100vh;
 }

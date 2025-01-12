@@ -1,15 +1,10 @@
 @font-face {
-    font-family: "BC-Bold";
-    src: url(fonts/BarlowCondensed-Bold.ttf);
-}
-
-@font-face {
-    font-family: "BC-Light";
-    src: url(fonts/BarlowCondensed-Light.ttf);
+    font-family: "Outfit-SemiBold";
+    src: url(fonts/Outfit-SemiBold.ttf);
 }
 
 * {
-    font-family: BC-Light;
+    font-family: "Outfit-SemiBold";
 }
 
 body {

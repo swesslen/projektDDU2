@@ -1,5 +1,5 @@
 function getRandomInt(max) {
-    return Math.floor(Math.random() * max + 1);
+    return Math.floor(Math.random() * max);
 }
 
 const main = document.querySelector("main");
@@ -42,7 +42,7 @@ function createGridNumbers(max) {
         let gridNumberDiv = document.createElement("div");
         numbersDiv.appendChild(gridNumberDiv);
         gridNumberDiv.classList.add("gridNumberDiv")
-        gridNumberDiv.innerHTML = getRandomInt(99);
+        gridNumberDiv.innerHTML = getRandomInt(100);
         numbers.push(gridNumberDiv);
         numbersNumbers.push(Number(gridNumberDiv.innerHTML));
     }

@@ -24,7 +24,7 @@ numbersRemoved.style.width = "200px"
 let amountSelected = 0;
 
 newRandomNumberButton.addEventListener("click", function() {
-    randomNumber.innerHTML = getRandomInt(99)
+    randomNumber.innerHTML = getRandomInt(100)
     amountSelected = 0;
 
     for (let number of numbers) {

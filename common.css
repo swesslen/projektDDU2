@@ -25,6 +25,10 @@ main {
     margin-top: 10px;
 }
 
+p {
+    margin: 0;
+}
+
 a {
     font-size: 20px;
     color: white;
@@ -47,6 +51,7 @@ a {
     justify-content: center;
     align-items: center;
     font-size: 20px;
+    border: 1px solid darkgray;
 }
 
 #numbers div:hover {

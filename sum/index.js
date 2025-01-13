@@ -41,7 +41,7 @@ createButton.addEventListener("click", function() {
     for (let number of numbers) {
         number.addEventListener("click", function() {
             number.style.backgroundColor = "rgb(87, 187, 87)";
-            sumOfMarked += Number(number.innerHTML);
+            sumOfMarked = Number(number.innerHTML);
             sumOfMarkedDiv.innerHTML = sumOfMarked;
         })
     }

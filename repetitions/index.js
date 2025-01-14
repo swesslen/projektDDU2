@@ -32,8 +32,19 @@ function findMostRepeatedNumbers(arr) {
     });
     return {numbers: mostFrequentNumbers, count: maxCount};
 }
-
 findMostRepeatedNumbers(numbersNumbers);
+
+function markMostRepeatedNumbers() {
+    for (let number of numbers) {
+        for (let numberX of theMostFrequentNumbersAndCount[0].numbers) {
+            if (number.innerHTML == numberX) {
+                number.style.backgroundColor = "lightblue"
+            }
+        }
+    }
+}
+markMostRepeatedNumbers()
+
 
 mostRepeatedNumbersDiv.innerHTML = `
     ${theMostFrequentNumbersAndCount[0].numbers} (Repeated ${theMostFrequentNumbersAndCount[0].count} times)
@@ -72,4 +83,5 @@ createButton.addEventListener("click", function() {
     mostRepeatedNumbersDiv.innerHTML = `
         ${theMostFrequentNumbersAndCount[0].numbers} (Repeated ${theMostFrequentNumbersAndCount[0].count} times)
     `;
+    markMostRepeatedNumbers();
 })
